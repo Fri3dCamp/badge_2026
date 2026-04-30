@@ -47,6 +47,10 @@ markdown_extensions:
 hooks:
   - mkdocs_hooks/i18n_theme_compat.py
 
+nav:
+  - index.md
+  - mcp.md
+
 plugins:
   - search
   - i18n:
