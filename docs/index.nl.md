@@ -1,4 +1,4 @@
-# Fri3d Camp Badge en Addons
+# Start pagina
 
 Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagina.
 
@@ -40,4 +40,4 @@ Start je badge niet meer op of wil je terug naar de originele software gaan. Wan
 ## Documentatie
 
 - [De hardware](https://github.com/Fri3dCamp/badge_2026_hw)
-- [Standaard OS}(https://micropythonos.com/)
+- [Standaard OS](https://micropythonos.com/)
