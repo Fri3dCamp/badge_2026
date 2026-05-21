@@ -9,7 +9,7 @@ Om je communicator te doen werken, moet je deze nog assambleren alvorens je deze
 De communicator bestaat uit:
 
 - QWERTY toetsenbord met achtergrond verlichting ontworpen door [Solder Party](https://www.solder.party/)
-- op RISC-V gebaseerd microcontroller - [WCH CH32X035](https://phyx.be/LANA_TNY/)
+- op RISC-V gebaseerd microcontroller - [WCH CH32X035](https://www.wch-ic.com/products/CH32X035.html)
 - [TDK ICS43434](https://invensense.tdk.com/products/ics-43434/) microfoon
 - [Analog Devices MAX98357A](https://www.analog.com/en/products/max98357a.html) DAC met versterker
 - kleine luidspreker
@@ -62,7 +62,7 @@ Duw de 2mm lange plastieken pinnetjes in de roze cover zoals getoond op de foto'
 
 Duw de lange plastieken pinnetjes in de 4 gaten die overeenkomen met de badge. Verwijder de beschermende achterplaat en duw de communicator op zijn plaats.
 
-![16mm pinnen geplaatst](16mm_spacer.jpg)
+![lange pinnen geplaatst](long_spacer.jpg)
 ![Communicator verbonden](communicator_mounted.jpg)
 
 ## Gebruik
