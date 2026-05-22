@@ -2,9 +2,9 @@
 
 Om je communicator te doen werken, moet je deze nog assambleren alvorens je deze kan aansluiten ops de badge.
 
-# HARDWARE
+## HARDWARE
 
-## Communicator eigenschappen
+### Communicator eigenschappen
 
 De communicator bestaat uit:
 
@@ -20,9 +20,9 @@ De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https:
 
 ![blockdiagram](blockdiagram.png)
 
-## Stap voor stap assemblage handleiding
+### Stap voor stap assemblage handleiding
 
-### Alle componenten netjes verpakt
+#### Alle componenten netjes verpakt
 
 Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de communicator add-on te bouwen
 
@@ -36,20 +36,20 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de communicator
 
 ![Inhoud van het pakje](contents.jpg)
 
-### Monteer de luidspreker
+#### Monteer de luidspreker
 
 Verwijder de plastieken laag om de luidspreker op de printplaat te kleven. Soldeer de 2 draden op de printplaat zoals op de foto hieronder. De rode draad moet naar het soldeervlak gaan dat gemarkeerd is met een `+`
 
 ![luidspreker gesoldeerd](speaker.jpg)
 ![luidspreker achter aanzicht](speaker2.jpg)
 
-### Soldeer de lange pinnen
+#### Soldeer de lange pinnen
 
 Plaats de lange pinnen aan de zijde met alle componenten. Je kan een andere vrouwelijke connector (of zelfs de badge) gebruiken om de 2 losse pinnen stroken netjes op een rijtje te houden tijdens het solderen.
 
 ![pinnen gesoldeerd](headers.jpg)
 
-### Monteer het toetsenbord
+#### Monteer het toetsenbord
 
 Duw de 2mm lange plastieken pinnetjes in de roze cover zoals getoond op de foto's hieronder. Leg het siliconen toetsenbord er in en klik het geheel op de communicator printplaat.
 
@@ -58,14 +58,14 @@ Duw de 2mm lange plastieken pinnetjes in de roze cover zoals getoond op de foto'
 ![toetsenbord in afdekplaat](pink_keyboard.jpg)
 ![toetsenbord gemonteerd](pink_mounted.jpg)
 
-### Verbind de communicator met de badge
+#### Verbind de communicator met de badge
 
 Duw de lange plastieken pinnetjes in de 4 gaten die overeenkomen met de badge. Verwijder de beschermende achterplaat en duw de communicator op zijn plaats.
 
 ![lange pinnen geplaatst](long_spacer.jpg)
 ![Communicator verbonden](communicator_mounted.jpg)
 
-## Gebruik
+### Gebruik
 
 Het toetsenbord doet zich voor als een HID input toestel op USB.
 Met de `Fn` toets kan je speciale functies activeren:
@@ -78,7 +78,7 @@ Met de `Fn` toets kan je speciale functies activeren:
 - `Fn+Spatiebalk`: schakel de achtergrond verlichting aan/uit
 - `Fn+Rechtse Shift`: Schakel Caps Lock
 
-## Firmware functies
+### Firmware functies
 
 De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I2C (adres `0x38`) en UART.
 
@@ -98,7 +98,7 @@ De eerste byte geeft aan welke modificatietoetsen zijn ingedrukt:
 De tweede byte is gereserveerd, de overige 6 bytes kunnen een [HID-sleutelcode](https://gist.github.com/MightyPork/6da26e382a7ad91b5496ee55fdc73db2) bevatten.
 
 &nbsp;<br>
-# SOFTWARE (FIRMWARE)
+## SOFTWARE (FIRMWARE)
 De firmware zal op je microcontroller geflashed zijn. Echter, als het niet zou werken, kan je de firmware opnieuw flashen aan het `badge flash station` in de soldeer area.
 
 Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/communicator_2026)
