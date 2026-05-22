@@ -50,6 +50,7 @@ hooks:
 
 nav:
   - index.md
+  - badge/index.md
   - mcp.md
   - communicator/index.md
 
