@@ -80,7 +80,7 @@ Met de `Fn` toets kan je speciale functies activeren:
 
 ### Firmware functies
 
-De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I2C (adres `0x38`) en UART.
+De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I2C (adres `0x40`) en UART.
 
 De eerste byte geeft aan welke modificatietoetsen zijn ingedrukt:
 
@@ -99,6 +99,52 @@ De tweede byte is gereserveerd, de overige 6 bytes kunnen een [HID-sleutelcode](
 
 &nbsp;<br>
 ## SOFTWARE (FIRMWARE)
+
+### Programmeren
 De firmware zal op je microcontroller geflashed zijn. Echter, als het niet zou werken, kan je de firmware opnieuw flashen aan het `badge flash station` in de soldeer area.
 
 Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/communicator_2026)
+
+### Compileren
+
+De firmware gebruikt [platformio](https://platformio.org) om de code te compileren. Installeer ook zeker de [ch32v platform package](https://github.com/Community-PIO-CH32V/platform-ch32v). Om de debug versie van de firmware te compileren a.d.h.v de command line, typ dan:
+
+```
+pio run -e debug
+```
+
+Daarna kan je de firmware terugvinden op deze plaats: `.pio/build/debug/firmware.bin`.
+
+Om de firmware te flashen naar je communicator, hou de knop dan ingedrukt waarna je de USB kabel naar je computer insteekt. Daarna run je:
+
+```
+pio run -e debug -t upload
+```
+
+Als alles goed loopt, is je communicator nu geherflasht met je eigen versie van de firmware.
+
+### I2C
+
+Zoals eerder vermeld kan de badge ook met de communicator can also communiceren via I2C (adres ```0x40```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
+
+| Register | Naam | Permissies | Bytes | omschrijving |
+|-|-|-|-|-|
+| 0x00 | Versienummer | R | 3 | De versie van de firmware |
+| 0x03 | huidig HID report packet | R | 8 | 8-byte HID report packet (zie hierboven) |
+| 0x0b | Configuratie | R/W | 1 | een 1-byte configuratie register (zie hieronder) |
+| 0x0c | Achtergrondverlichting | R/W | 2 | Toetsenbord achtergrond verlichting (0-100) |
+
+De configuratie is een 1-byte waarde met de volgende betekenis voor elke bit:
+| Bit | Name |
+|-|-|
+| \[7:2\] | gereserveerd |
+| 1 | herstart naar bootloader |
+| 0 | activeer interrupt mode (in ontwikkeling) |
+
+### UART
+
+Je kan ook vanuit de badge via UART met de badge communiceren. Dit gebeurt met de UART instellingen 115200 8N1.
+
+Het voordeel hiervan is dat de badge gewoon moet luisten naar inkomende HID pakketten via UART. Deze pakketten komen automatisch binnen zonder dat de badge moet pollen.
+
+Je kan ook vanuit de badge 2 bytes naar de UART van de communicator versturen om de backlight in te stellen. De eerste byte moet een waarde tussen 0 en 100 zijn (de intensiteit van de achtergrondverlichting), de 2de byte moet het binair tegengestelde zijn van de eerste byte ( XOR met 0xFF).
