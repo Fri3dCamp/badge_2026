@@ -18,9 +18,18 @@ python -m venv .venv
 
 Then activate it with:
 
-```bash
-source .venv/bin/activate
-```
+- Linux/macOS:
+  ```bash
+  source .venv/bin/activate
+  ```
+- Windows (PowerShell):
+  ```powershell
+  .venv\Scripts\Activate.ps1
+  ```
+- Windows (Command Prompt):
+  ```bat
+  .venv\Scripts\activate.bat
+  ```
 
 Install the dependencies with:
 
