@@ -18,9 +18,20 @@ python -m venv .venv
 
 Then activate it with:
 
-```bash
-source .venv/bin/activate
-```
+- Linux/macOS:
+  ```bash
+  source .venv/bin/activate
+  ```
+- Windows (PowerShell):
+  ```powershell
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+  .venv\Scripts\Activate.ps1
+  ```
+  If PowerShell script execution is blocked, setting the policy as shown above usually fixes it. If you already have Bash (for example via WSL or Git Bash), using Bash is often easier.
+- Windows (Command Prompt):
+  ```bat
+  .venv\Scripts\activate.bat
+  ```
 
 Install the dependencies with:
 
