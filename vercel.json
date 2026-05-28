@@ -1,0 +1,10 @@
+{
+  "buildCommand": "mkdocs build",
+  "outputDirectory": "site",
+  "redirects": [
+    { "source": "/", "destination": "/badge_2026/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/badge_2026/:path*", "destination": "/:path*" }
+  ]
+}
