@@ -16,15 +16,15 @@ Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagin
 ## Fri3d Camp 2024 
 <div style="display: grid;grid-gap:1rem;grid-template-columns: repeat(2, 1fr);">
 
-<a href="/badge_2024/flamingo"><img src="../badge_2024/flamingo/flamingo.jpg" alt="Flamingo"/></a>
-<a href="/badge_2024/communicator/"><img src="../badge_2024/communicator.webp" alt="Communicator"/></a>
-<a href="/badge_2024/noisycricket/"><img src="../badge_2024/noisycricket/pin_header_alternate_orientation.png" alt="Noisy Cricket"/></a>
+<a href="/badge_2024/flamingo"><img src="https://fri3dcamp.github.io/badge_2024/flamingo/flamingo.jpg" alt="Flamingo"/></a>
+<a href="/badge_2024/communicator/"><img src="https://fri3dcamp.github.io/badge_2024/communicator.webp" alt="Communicator"/></a>
+<a href="/badge_2024/noisycricket/"><img src="https://fri3dcamp.github.io/badge_2024/noisycricket/pin_header_alternate_orientation.png" alt="Noisy Cricket"/></a>
 
 </div>
 ## Fri3d Camp 2022
 <div style="display: grid;grid-gap:1rem;grid-template-columns: repeat(2, 1fr);">
 
-<a href="/badge_2024/blaster-2022/"><img src="../badge_2024/blaster-2022.webp" alt="Blaster 2022"/></a>
+<a href="/badge_2024/blaster-2022/"><img src="https://fri3dcamp.github.io/badge_2024/blaster-2022.webp" alt="Blaster 2022"/></a>
 
 </div>
 
