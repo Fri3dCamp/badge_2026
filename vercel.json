@@ -1,6 +1,7 @@
 {
   "buildCommand": "mkdocs build",
   "outputDirectory": "site",
+  "trailingSlash": true,
   "redirects": [
     { "source": "/", "destination": "/badge_2026/", "permanent": false }
   ],
