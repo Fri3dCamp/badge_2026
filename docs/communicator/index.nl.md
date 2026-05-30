@@ -144,8 +144,8 @@ De configuratie is een 1-byte waarde met de volgende betekenis voor elke bit:
 
 ### UART
 
-Je kan ook vanuit de badge via UART met de badge communiceren. Dit gebeurt met de UART instellingen 115200 8N1.
+Je kan ook vanuit de badge via [UART](https://nl.wikipedia.org/wiki/UART "ook wel seriële poort genoemd") met het keyboard communiceren. Dit gebeurt met de UART instellingen [115200 8N1](#UART "8 data bits, geen pariteits bit, 1 stop bit aan een snelheid van 115200 baud").
 
 Het voordeel hiervan is dat de badge gewoon moet luisten naar inkomende HID pakketten via UART. Deze pakketten komen automatisch binnen zonder dat de badge moet pollen.
 
-Je kan ook vanuit de badge 2 bytes naar de UART van de communicator versturen om de backlight in te stellen. De eerste byte moet een waarde tussen 0 en 100 zijn (de intensiteit van de achtergrondverlichting), de 2de byte moet het binair tegengestelde zijn van de eerste byte ( XOR met 0xFF).
+Je kan ook vanuit de badge 2 bytes naar de UART van de communicator versturen om de backlight in te stellen. De eerste byte moet een waarde tussen 0 en 100 zijn (de intensiteit van de achtergrondverlichting), de 2de byte moet het binair tegengestelde zijn van de eerste byte (XOR met 0xFF).
