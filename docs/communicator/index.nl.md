@@ -144,7 +144,7 @@ De configuratie is een 1-byte waarde met de volgende betekenis voor elke bit:
 
 ### UART
 
-Je kan ook vanuit de badge via [UART](https://nl.wikipedia.org/wiki/UART "ook wel seriële poort genoemd") met het keyboard communiceren. Dit gebeurt met de UART instellingen [115200 8N1](#UART "8 data bits, geen pariteits bit, 1 stop bit aan een snelheid van 115200 baud").
+Je kan ook vanuit de badge via [UART](https://nl.wikipedia.org/wiki/UART "ook wel seriële poort genoemd") met het keyboard communiceren. Dit gebeurt met de UART instellingen [115200 8N1](## "8 data bits, geen pariteits bit, 1 stop bit aan een snelheid van 115200 baud").
 
 Het voordeel hiervan is dat de badge gewoon moet luisten naar inkomende HID pakketten via UART. Deze pakketten komen automatisch binnen zonder dat de badge moet pollen.
 
