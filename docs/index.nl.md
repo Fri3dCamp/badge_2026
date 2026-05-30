@@ -11,6 +11,7 @@ Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagin
 <a href="/badge_2026/dj/"><img src="/badge_2026/dj.jpg" alt="DJ Controller"/></a>
 <a href="/badge_2026/tof/"><img src="/badge_2026/tof.jpg" alt="ToF Addon"/></a>
 <a href="/badge_2026/lora/"><img src="/badge_2026/lora.jpg" alt="LoRa Expansion"/></a>
+<a href="/badge_2026/mirror/"><img src="/badge_2026/mirror.jpg" alt="SaO Mirror"/></a>
 
 </div>
 ## Fri3d Camp 2024 
