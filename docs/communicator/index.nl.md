@@ -80,7 +80,7 @@ Met de `Fn` toets kan je speciale functies activeren:
 
 ### Firmware functies
 
-De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I2C (adres `0x40`) en UART.
+De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I²C (adres `0x40`) en UART.
 
 De eerste byte geeft aan welke modificatietoetsen zijn ingedrukt:
 
@@ -123,9 +123,9 @@ pio run -e debug -t upload
 
 Als alles goed loopt, is je communicator nu geherflasht met je eigen versie van de firmware.
 
-### I2C
+### I²C
 
-Zoals eerder vermeld kan de badge ook met de communicator can also communiceren via I2C (adres ```0x40```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
+Zoals eerder vermeld kan de badge ook met de communicator communiceren via I²C (adres ```0x40```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
 
 | Register | Naam | Permissies | Bytes | omschrijving |
 |-|-|-|-|-|
@@ -135,6 +135,7 @@ Zoals eerder vermeld kan de badge ook met de communicator can also communiceren 
 | 0x0c | Achtergrondverlichting | R/W | 2 | Toetsenbord achtergrond verlichting (0-100) |
 
 De configuratie is een 1-byte waarde met de volgende betekenis voor elke bit:
+
 | Bit | Name |
 |-|-|
 | \[7:2\] | gereserveerd |
