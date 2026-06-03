@@ -15,7 +15,7 @@ De DJ addon bestaat uit:
 - 2 connectors voor rotary encoders
 - 2 connectors voor harde schijven (zie verder)
 
-De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_addon_2026)
+De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_2026)
 
 ![blockdiagram](blockdiagram.png)
 
@@ -186,7 +186,7 @@ Kijk vooral even naar de [driver](https://github.com/MicroPythonOS/MicroPythonOS
 
 De firmware zal op je microcontroller geflashed zijn. Echter, als het niet zou werken, kan je de firmware opnieuw flashen aan het `flash station` in de soldeer area.
 
-Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_addon_2026) in de `firmware` subfolder. Lees zeker ook de `README.md` voor meer informatie.
+Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_2026) in de `firmware` subfolder. Lees zeker ook de `README.md` voor meer informatie.
 
 ### Compileren
 
