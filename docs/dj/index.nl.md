@@ -30,20 +30,21 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de DJ add-on te
 - 3 faders
 - 8 siliconen knoppen
 - 4 M3 schroeven
+- een plaatje voor de knoppen
 - 1 x 2x6 pinheader met extra lange pinnen
 
 ![Inhoud van het pakje](contents.jpg)
 
 #### Monteer de faders
 
-TODO
+Er zijn 3 faders om te solderen: 1 links, 1 rechts en 1 onderaan. Zet ze in de voorziene gaten en soldeer ze vast langs de achterkant van de PCB.
 
 ![luidspreker gesoldeerd](speaker.jpg)
 ![luidspreker achter aanzicht](speaker2.jpg)
 
 #### Monteer de potmeters
 
-TODO
+Doe hetzelfde voor de 6 potmeters, 3 aan elke kant. Klik ze in de voorziene gaten en soldeer alle contactpunten aan de achterzijde van de PCB.
 
 ![luidspreker gesoldeerd](speaker.jpg)
 ![luidspreker achter aanzicht](speaker2.jpg)
@@ -56,12 +57,20 @@ Plaats de lange pinnen aan de zijde met alle componenten. Je kan een andere vrou
 
 #### Monteer het knoppen
 
-TODO
+Leg de siliconen knoppen op de PCB en schijf daarover het plaatje. Zorg dat de schroefgaten in elke hoek van de siliconen knoppen, de PCB en het plaatje mooi uitgelijnd zijn. Monteer daarna de 4 schroeven in de gaten.
 
 ![2mm pinngen geplaats, closeup](pink_spacer.jpg)
 ![2mm pinngen geplaats](pink_spacer_overview.jpg)
 ![toetsenbord in afdekplaat](pink_keyboard.jpg)
 ![toetsenbord gemonteerd](pink_mounted.jpg)
+
+#### Verbind 2 harde schijven of rotary encoders
+
+In klassieke harde schijven voor computers zit steeds een ronde magnetische plaat die door een spindelmotor wordt rondgedraaid. Deze spindelmotor is (meestal) een 3-fasige brushless DC-motor zonder sensoren. Er zullen dus 4 contactpunten naar de motor gaan. De bedoeling is dat we deze spindelmotor als input device gaan gebruiken op de DJ add-on door 3 van deze 4 contactpunten te verbinden met 1 van de encoder inputs van de DJ add-on. Ook daarvoor is dus wat soldeerwerk nodig. Onze inspiratie hiervoor kwam van [deze instructable](https://www.instructables.com/HDDJ-Turning-an-old-hard-disk-drive-into-a-rotary/), waar je dus ook meer informatie kan vinden.
+
+We sluiten dus 2 van de 3 fases van de motor aan op de DJ add-on. Deze geven elk een sinusoidaal signaal dat 120 graden in fase verschoven is. Intern op de DJ add-on zijn [comparators](https://en.wikipedia.org/wiki/Comparator) gemonteerd die deze 2 sinus golven omzet in 2 blokgolven die gemakkelijk door de encoder functie van de CH32X035 kunnen gemeten worden.
+
+Je kan ook klassieke rotary encoders aansluiten op de DJ add-on. Deze zullen waarschijnlijk een preciezer signaal opleveren dan de HDDs.
 
 #### Verbind de DJ add-on met de badge
 
@@ -75,7 +84,7 @@ In de App Store van [MicropythonOS](https://micropythonos.com) kan je een eenvou
 
 De DJ add-on doet zich voor als een [MIDI](https://midi.org/basic-of-usb) toestel. Je kan de DJ add-on via USB aansluiten op je computer, of via de expansion connector met je badge. De DJ Add-on kan zowel via UART als via I2C met de badge communiceren. De UART instellingen zijn 115200 8N1.
 
-Via USB en UART worden volgende MIDI signalen gebruikt:
+Via USB en UART wordt het MIDI protocol gebruikt. Volgende MIDI signalen worden verstuurd door de DJ add-on:
 
 | Input | MIDI | Note | bereik |
 |-|-|-|-|
@@ -127,7 +136,7 @@ De volgende tabel geeft de mapping weer tussen de MIDI waarden en de ingestelde 
 | 0x08 | 0xf2 | 0xf2 | 0xff | bright white |
 | 0x09 | 0xff | 0x80 | 0x00 | green |
 
-Via I2C wordt geen MIDI gebruikt, maar klassieke register read/write operaties, zoals gebruikelijk bij I2C devices. Onderstaande tabel geeft de registers weer met hun functies en permissies alsook de lengte en bereik van de data:
+Via I2C wordt niet het MIDI protocol gebruikt, maar klassieke register read/write operaties, zoals gebruikelijk bij I2C devices. Onderstaande tabel geeft de registers weer met hun functies en permissies alsook de lengte en bereik van de data:
 
 | Register | Naam | Permissies | Bytes | omschrijving |
 |-|-|-|-|-|
@@ -169,7 +178,7 @@ Via I2C wordt geen MIDI gebruikt, maar klassieke register read/write operaties, 
 | 0x30 | LED 8 groen | R/W | 1 | waarde 0-255 |
 | 0x31 | LED 8 blauw | R/W | 1 | waarde 0-255 |
 
-Kijk vooral even naar de [driver](https://github.com/MicroPythonOS/MicroPythonOS/blob/main/internal_filesystem/lib/drivers/fri3d/dj.py) en [app](https://github.com/MicroPythonOS/MicroPythonOS/tree/main/internal_filesystem/apps/com.micropythonos.dj_addon) code in MicropythonOS om te weten hoe je de DJ Add-on kan aanspreken vanuit Micropython.
+Kijk vooral even naar de [driver](https://github.com/MicroPythonOS/MicroPythonOS/blob/main/internal_filesystem/lib/drivers/fri3d/dj.py) en [app](https://github.com/MicroPythonOS/MicroPythonOS/tree/main/internal_filesystem/apps/com.micropythonos.dj_addon) code in MicropythonOS om te weten hoe je de DJ Add-on kan aanspreken vanuit Micropython via I2C.
 
 ## SOFTWARE (FIRMWARE)
 
