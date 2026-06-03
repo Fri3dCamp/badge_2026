@@ -80,7 +80,7 @@ Met de `Fn` toets kan je speciale functies activeren:
 
 ### Firmware functies
 
-De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I²C (adres `0x40`) en UART.
+De firmware stuurt [HID pakketten](https://files.microscan.com/helpfiles/ms4_help_file/ms-4_help-02-46.html) (8 bytes) uit op USB, I²C (adres `0x39`) en UART.
 
 De eerste byte geeft aan welke modificatietoetsen zijn ingedrukt:
 
@@ -125,7 +125,7 @@ Als alles goed loopt, is je communicator nu geherflasht met je eigen versie van 
 
 ### I²C
 
-Zoals eerder vermeld kan de badge ook met de communicator communiceren via I²C (adres ```0x40```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
+Zoals eerder vermeld kan de badge ook met de communicator communiceren via I²C (adres ```0x39```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
 
 | Register | Naam | Permissies | Bytes | omschrijving |
 |-|-|-|-|-|
@@ -138,8 +138,9 @@ De configuratie is een 1-byte waarde met de volgende betekenis voor elke bit:
 
 | Bit | Name |
 |-|-|
-| \[7:2\] | gereserveerd |
-| 1 | herstart naar bootloader |
+| \[7:3\] | gereserveerd |
+| 2 | bereid firmware update voor |
+| 1 | herstart |
 | 0 | activeer interrupt mode (in ontwikkeling) |
 
 ### UART
