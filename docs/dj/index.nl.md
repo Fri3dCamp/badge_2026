@@ -1,6 +1,6 @@
 # DJ Add-on
 
-Om je DJ Add-on te doen werken, moet je deze nog assambleren alvorens je deze kan aansluiten ops de badge.
+Om je DJ Add-on te doen werken, moet je deze nog assambleren alvorens je deze kan aansluiten op de badge.
 
 ## HARDWARE
 
@@ -10,12 +10,10 @@ De DJ addon bestaat uit:
 
 - 6 potmeters
 - 3 faders
-- 8 knoppen
-- 8 RGB LEDs (1 onder elke knop)
+- 8 knoppen (in een 3x3 matrix)
+- 8 WS2812 RGB LEDs (1 onder elke knop)
 - 2 connectors voor rotary encoders
 - 2 connectors voor harde schijven (zie verder)
-
-Je kan de DJ add-on ook als [USB MIDI](https://midi.org/basic-of-usb) toestel gebruiken.
 
 De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_addon_2026)
 
@@ -69,13 +67,15 @@ TODO
 
 TODO
 
+In de App Store van [MicropythonOS](https://micropythonos.com) kan je een eenvoudige DJ Add-on app vinden die je kan gebruiken om te testen of je DJ Add-on helemaal goed werkt.
+
 ![lange pinnen geplaatst](long_spacer.jpg)
 
 ### Gebruik
 
-De DJ add-on doet zich voor als een [MIDI](https://midi.org/basic-of-usb) toestel. Je kan de DJ add-on via USB aansluiten op je computer, of via de expansion connector met je badge.
+De DJ add-on doet zich voor als een [MIDI](https://midi.org/basic-of-usb) toestel. Je kan de DJ add-on via USB aansluiten op je computer, of via de expansion connector met je badge. De DJ Add-on kan zowel via UART als via I2C met de badge communiceren. De UART instellingen zijn 115200 8N1.
 
-In alle gevallen worden volgende MIDI signalen uitgestuurd:
+Via USB en UART worden volgende MIDI signalen gebruikt:
 
 | Input | MIDI | Note | bereik |
 |-|-|-|-|
@@ -127,38 +127,11 @@ De volgende tabel geeft de mapping weer tussen de MIDI waarden en de ingestelde 
 | 0x08 | 0xf2 | 0xf2 | 0xff | bright white |
 | 0x09 | 0xff | 0x80 | 0x00 | green |
 
-## SOFTWARE (FIRMWARE)
-
-### Programmeren
-De firmware zal op je microcontroller geflashed zijn. Echter, als het niet zou werken, kan je de firmware opnieuw flashen aan het `flash station` in de soldeer area.
-
-Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_addon_2026) in de `firmware` subfolder.
-
-### Compileren
-
-De firmware gebruikt [platformio](https://platformio.org) om de code te compileren. Installeer ook zeker de [ch32v platform package](https://github.com/Community-PIO-CH32V/platform-ch32v). Om de debug versie van de firmware te compileren a.d.h.v de command line, typ dan:
-
-```
-pio run -e debug
-```
-
-Daarna kan je de firmware terugvinden op deze plaats: `.pio/build/debug/firmware.bin`.
-
-Om de firmware te flashen naar je DJ Add-on, hou de knop dan ingedrukt waarna je de USB kabel naar je computer insteekt. Daarna run je:
-
-```
-pio run -e debug -t upload
-```
-
-Als alles goed loopt, is je DJ Add-on nu geherflasht met je eigen versie van de firmware.
-
-### I2C
-
-Zoals eerder vermeld kan de badge ook met de DJ add-on communiceren via I2C (adres ```0x3A```). De volgende registers kunnen aangesproken worden om gegevens op de vragen of weg te schrijven:
+Via I2C wordt geen MIDI gebruikt, maar klassieke register read/write operaties, zoals gebruikelijk bij I2C devices. Onderstaande tabel geeft de registers weer met hun functies en permissies alsook de lengte en bereik van de data:
 
 | Register | Naam | Permissies | Bytes | omschrijving |
 |-|-|-|-|-|
-| 0x00 | Versienummer | R | 3 | De versie van de firmware |
+| 0x00 | Versienummer | R | 3 | De versie van de firmware (bvb 1.0.0) |
 | 0x03 | Knoppen | R | 8 | elke bit geeft de status van een knop |
 | 0x04 | Potmeter links boven | R | 2 | waarde 0-4095 |
 | 0x06 | Potmeter links midden | R | 2 | waarde 0-4095 |
@@ -196,10 +169,30 @@ Zoals eerder vermeld kan de badge ook met de DJ add-on communiceren via I2C (adr
 | 0x30 | LED 8 groen | R/W | 1 | waarde 0-255 |
 | 0x31 | LED 8 blauw | R/W | 1 | waarde 0-255 |
 
-### UART
+Kijk vooral even naar de [driver](https://github.com/MicroPythonOS/MicroPythonOS/blob/main/internal_filesystem/lib/drivers/fri3d/dj.py) en [app](https://github.com/MicroPythonOS/MicroPythonOS/tree/main/internal_filesystem/apps/com.micropythonos.dj_addon) code in MicropythonOS om te weten hoe je de DJ Add-on kan aanspreken vanuit Micropython.
 
-Je kan ook vanuit de badge via UART met de badge communiceren. Dit gebeurt met de UART instellingen 115200 8N1.
+## SOFTWARE (FIRMWARE)
 
-Het voordeel hiervan is dat de badge gewoon moet luisten naar inkomende MIDI pakketten via UART. Deze pakketten komen automatisch binnen zonder dat de badge moet pollen.
+### Programmeren
 
-Je kan ook vanuit de badge MIDI pakketen naar de DJ ADd-on versturen om de LEDs in te stellen. Zie hiervoor de beschrijven van de MIDI paketten hierboven.
+De firmware zal op je microcontroller geflashed zijn. Echter, als het niet zou werken, kan je de firmware opnieuw flashen aan het `flash station` in de soldeer area.
+
+Als je wil, kan je de firmware ook zelf flashen met je eigen laptop. Bijvoorbeeld mocht je de firmware willen updaten of zelf aanpassingen willen maken. De bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_addon_2026) in de `firmware` subfolder. Lees zeker ook de `README.md` voor meer informatie.
+
+### Compileren
+
+De firmware gebruikt [platformio](https://platformio.org) om de code te compileren. Installeer ook zeker de [ch32v platform package](https://github.com/Community-PIO-CH32V/platform-ch32v). Om de debug versie van de firmware te compileren a.d.h.v de command line, typ dan:
+
+```
+pio run -e debug
+```
+
+Daarna kan je de firmware terugvinden op deze plaats: `.pio/build/debug/firmware.bin`.
+
+Om de firmware te flashen naar je DJ Add-on, hou de knop dan ingedrukt waarna je de USB kabel naar je computer insteekt. Daarna run je:
+
+```
+pio run -e debug -t upload
+```
+
+Als alles goed loopt, is je DJ Add-on nu geherflasht met je eigen versie van de firmware.
