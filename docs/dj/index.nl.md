@@ -39,15 +39,13 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de DJ add-on te
 
 Er zijn 3 faders om te solderen: 1 links, 1 rechts en 1 onderaan. Zet ze in de voorziene gaten en soldeer ze vast langs de achterkant van de PCB.
 
-![luidspreker gesoldeerd](speaker.jpg)
-![luidspreker achter aanzicht](speaker2.jpg)
+![faders gesoldeerd](faders.jpg)
 
-#### Monteer de potmeters
+#### Monteer de potentiometers
 
-Doe hetzelfde voor de 6 potmeters, 3 aan elke kant. Klik ze in de voorziene gaten en soldeer alle contactpunten aan de achterzijde van de PCB.
+Doe hetzelfde voor de 6 potentiometers, 3 aan elke kant. Klik ze in de voorziene gaten en soldeer alle contactpunten aan de achterzijde van de PCB.
 
-![luidspreker gesoldeerd](speaker.jpg)
-![luidspreker achter aanzicht](speaker2.jpg)
+![potentiometers gesoldeerd](pot.jpg)
 
 #### Soldeer de lange pinnen
 
@@ -55,14 +53,12 @@ Plaats de lange pinnen aan de zijde met alle componenten. Je kan een andere vrou
 
 ![pinnen gesoldeerd](headers.jpg)
 
-#### Monteer het knoppen
+#### Monteer de siliconen toetsen
 
-Leg de siliconen knoppen op de PCB en schuif daarover het plaatje. Zorg dat de schroefgaten in elke hoek van de siliconen knoppen, de PCB en het plaatje mooi uitgelijnd zijn. Monteer daarna de 4 schroeven in de gaten.
+Leg de siliconen toetsen op de printplaat en schuif daarover het houten afdekplaatje. Zorg dat de schroefgaten in elke hoek van de siliconen laag, de PCB en het plaatje mooi uitgelijnd zijn. Monteer daarna de 4 schroeven in de gaten langs de onderzijde (de kant van de PCB), Plaats de moer aan de bovenzijde (de kant van de houten plaat).
 
-![2mm pinngen geplaats, closeup](pink_spacer.jpg)
-![2mm pinngen geplaats](pink_spacer_overview.jpg)
-![toetsenbord in afdekplaat](pink_keyboard.jpg)
-![toetsenbord gemonteerd](pink_mounted.jpg)
+![Toesten geplaatst](keys.jpg)
+![Afdekplaatje geplaatst](key_cover.jpg)
 
 #### Verbind 2 harde schijven of rotary encoders
 
