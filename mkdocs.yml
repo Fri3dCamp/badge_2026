@@ -51,8 +51,12 @@ hooks:
 nav:
   - index.md
   - badge/index.md
-  - mcp.md
   - communicator/index.md
+  - dj/index.md
+  - tof/index.md
+  - lora/index.md
+  - mirror/index.md
+  - mcp.md
 
 plugins:
   - search
