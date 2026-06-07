@@ -22,7 +22,7 @@ De badge bestaat deze editie niet uit 1, maar **2** microcontrollers! Naast de v
 ![Blockdiagramma](badge_2026_blockdiagram.png)
 
 ## Software
-De [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) draait standaard [MicroPythonOS](https://micropythonos.com/)
+De [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) draait een [op maat gemaakte](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS) versie van [MicroPythonOS](https://micropythonos.com/)
 
 
 Op de extra [CH32X035](https://www.wch-ic.com/products/CH32X035.html) microcontroller, die je kan terugvinden op de badge, draait [standaard firmware](https://github.com/Fri3dCamp/badge_2026_fw) die deze microcontroller laat werken als een IO expander chip via een I²C interface.
