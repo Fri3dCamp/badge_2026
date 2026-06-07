@@ -31,7 +31,7 @@ Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagin
 
 ## Aan de slag
 
-De badge draait standaard [MicroPythonOS](https://docs.micropythonos.com/) en komt met een aantal [voorgeïnstalleerde applicaties](https://docs.micropythonos.com/apps/built-in-apps/) en een [app store](https://docs.micropythonos.com/apps/appstore/) waar je nog veel extra programmas kan vinden.
+De badge draait een aangepaste versie van [MicroPythonOS](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS) en komt met een aantal [voorgeïnstalleerde applicaties](https://docs.micropythonos.com/apps/built-in-apps/) en een [app store](https://docs.micropythonos.com/apps/appstore/) waar je nog veel extra programmas kan vinden.
 
 
 ## Reset Standaard Firmware
@@ -41,4 +41,4 @@ Start je badge niet meer op of wil je terug naar de originele software gaan. Wan
 ## Documentatie
 
 - [De hardware](https://github.com/Fri3dCamp/badge_2026_hw)
-- [Standaard OS](https://micropythonos.com/)
+- [Standaard OS](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)
