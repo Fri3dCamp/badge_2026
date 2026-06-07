@@ -10,7 +10,7 @@ Wanneer je de badge vast hebt zals je zien dat er al aardig wat aansluitmogelijk
 - badge expansion connector (12 pinnen beschikbaar, IO en verschillende voedingen)
 - MicroSD card 
 
-### Optioneel
+### Optionele connectiviteit
 - **[SAO](https://hackaday.io/project/175182-simple-add-ons-sao) connector**, ideaal voor uitbreidingen zoals [ToF addon](../tof)
 - Een **"multimeter" aansluiting** waarbij je +3.3V, GND en een analoge ingang pin van de [WCH CH32X035](https://www.wch-ic.com/products/CH32X035.html) microcontroller ter beschikking hebt. Met wat handig rekenwerk en een stukje code kan je hier dus spanningen tot 15V mee meten of weerstandswaardes nameten. Let wel op, er zit geen enkele vorm van protectie op deze pin, iets wat bij een gewone multimeter uiteraard wel aanwezig is. Wees dus voorzichtig bij het gebruik hiervan.
 - Voor de mensen die de LoRa kit hebben gekocht is er nog een **LoRa antenna aansluiting** voorzien. Hier kan je de meegeleverde spiraal antenna op solderen of de optioneel beschikbare SMA connector plaatsen. Het voordeel van die SMA connector is dat je makkelijk van antenne kan wisselen. Denk dan bijvoorbeeld aan een directionele antenne wanneer je met [foxhunting](https://en.wikipedia.org/wiki/Transmitter_hunting) bezig bent en een omnidirectionele antenna voor normaal gebruik.
@@ -23,6 +23,5 @@ De badge bestaat deze editie niet uit 1, maar **2** microcontrollers! Naast de v
 
 ## Software
 De [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) draait een [op maat gemaakte](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS) versie van [MicroPythonOS](https://micropythonos.com/)
-
 
 Op de extra [CH32X035](https://www.wch-ic.com/products/CH32X035.html) microcontroller, die je kan terugvinden op de badge, draait [standaard firmware](https://github.com/Fri3dCamp/badge_2026_fw) die deze microcontroller laat werken als een IO expander chip via een I²C interface.
