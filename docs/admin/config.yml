@@ -5,10 +5,8 @@ backend:
 # Netlify Identity + Git Gateway handles hosted login and repo access.
 publish_mode: editorial_workflow
 
-# Set these to your Netlify production URL.
-# Example: https://<your-netlify-domain>/badge_2026/
-site_url: https://<your-netlify-domain>/badge_2026/
-display_url: https://<your-netlify-domain>/badge_2026/
+site_url: https://fri3d2026.netlify.app/badge_2026/
+display_url: https://fri3d2026.netlify.app/badge_2026/
 logo_url: /badge_2026/assets/logo_white.svg
 
 i18n:
