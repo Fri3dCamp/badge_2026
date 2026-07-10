@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity + Git Gateway handles hosted login and repo access.
+publish_mode: editorial_workflow
+
+# Set these to your Netlify production URL.
+# Example: https://<your-netlify-domain>/badge_2026/
+site_url: https://<your-netlify-domain>/badge_2026/
+display_url: https://<your-netlify-domain>/badge_2026/
+logo_url: /badge_2026/assets/logo_white.svg
+
+i18n:
+  structure: multiple_files
+  locales: [nl, en]
+  default_locale: nl
+
+media_folder: docs/assets/uploads
+public_folder: /badge_2026/assets/uploads
+
+collections:
+  - name: docs
+    label: Documentation
+    label_singular: Page
+    folder: docs
+    create: true
+    extension: md
+    i18n: true
+    summary: "{{title}}"
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        i18n: true
+      - name: body
+        label: Content
+        widget: markdown
+        i18n: true

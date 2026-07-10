@@ -1,3 +1,7 @@
+---
+title: "DJ Add-on"
+---
+
 # DJ Add-on
 
 Om je DJ Add-on te doen werken, moet je deze nog assambleren alvorens je deze kan aansluiten op de badge.
@@ -17,7 +21,7 @@ De DJ addon bestaat uit:
 
 De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/dj_2026)
 
-![blockdiagram](blockdiagram.png)
+![blockdiagram](/badge_2026/assets/uploads/dj-blockdiagram.png)
 
 ### Stap voor stap assemblage handleiding
 
@@ -33,32 +37,32 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de DJ add-on te
 - een plaatje voor de knoppen
 - 1 x 2x6 pinheader met extra lange pinnen
 
-![Inhoud van het pakje](contents.jpg)
+![Inhoud van het pakje](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Monteer de faders
 
 Er zijn 3 faders om te solderen: 1 links, 1 rechts en 1 onderaan. Zet ze in de voorziene gaten en soldeer ze vast langs de achterkant van de PCB.
 
-![faders gesoldeerd](faders.jpg)
+![faders gesoldeerd](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Monteer de potentiometers
 
 Doe hetzelfde voor de 6 potentiometers, 3 aan elke kant. Klik ze in de voorziene gaten en soldeer alle contactpunten aan de achterzijde van de PCB.
 
-![potentiometers gesoldeerd](pot.jpg)
+![potentiometers gesoldeerd](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Soldeer de lange pinnen
 
 Plaats de lange pinnen aan de zijde met alle componenten. Je kan een andere vrouwelijke connector (of zelfs de badge) gebruiken om de 2 losse pinnen stroken netjes op een rijtje te houden tijdens het solderen.
 
-![pinnen gesoldeerd](headers.jpg)
+![pinnen gesoldeerd](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Monteer de siliconen toetsen
 
 Leg de siliconen toetsen op de printplaat en schuif daarover het houten afdekplaatje. Zorg dat de schroefgaten in elke hoek van de siliconen laag, de PCB en het plaatje mooi uitgelijnd zijn. Monteer daarna de 4 schroeven in de gaten langs de onderzijde (de kant van de PCB), Plaats de moer aan de bovenzijde (de kant van de houten plaat).
 
-![Toesten geplaatst](keys.jpg)
-![Afdekplaatje geplaatst](key_cover.jpg)
+![Toesten geplaatst](/badge_2026/assets/uploads/placeholder.svg)
+![Afdekplaatje geplaatst](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Verbind 2 harde schijven of rotary encoders
 
@@ -72,7 +76,7 @@ In de App Store van [MicropythonOS](https://micropythonos.com) kan je een eenvou
 
 Je kan je DJ Add-on ook meteen uittesten in je browser met de [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/): sluit de DJ Add-on via USB aan op je computer, open de website en klik op "Connect controller". Daarna kan je tracks laden en mixen met de potmeters, faders en knoppen van je DJ Add-on.
 
-[![Fri3d Scratcher](./fri3d-scratcher.png)](https://fri3dcamp.github.io/fri3d-scratcher/)
+[![Fri3d Scratcher](/badge_2026/assets/uploads/dj-fri3d-scratcher.png)](https://fri3dcamp.github.io/fri3d-scratcher/)
 
 ### Gebruik
 

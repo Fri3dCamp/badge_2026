@@ -48,16 +48,6 @@ markdown_extensions:
 hooks:
   - mkdocs_hooks/i18n_theme_compat.py
 
-nav:
-  - index.md
-  - badge/index.md
-  - communicator/index.md
-  - dj/index.md
-  - tof/index.md
-  - lora/index.md
-  - mirror/index.md
-  - mcp.md
-
 plugins:
   - search
   - i18n:

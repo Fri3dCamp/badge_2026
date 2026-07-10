@@ -1,3 +1,7 @@
+---
+title: "Communicator add-on"
+---
+
 # Communicator add-on
 
 Om je communicator te doen werken, moet je deze nog assambleren alvorens je deze kan aansluiten ops de badge.
@@ -18,7 +22,7 @@ Je kan het toetsenbord ook als USB toetsenbord gebruiken.
 
 De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https://github.com/Fri3dCamp/communicator_2026)
 
-![blockdiagram](blockdiagram.png)
+![blockdiagram](/badge_2026/assets/uploads/communicator-blockdiagram.png)
 
 ### Stap voor stap assemblage handleiding
 
@@ -34,36 +38,36 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de communicator
 - siliconen toetsenbord
 - 1 x 2x6 pinheader met extra lange pinnen
 
-![Inhoud van het pakje](contents.jpg)
+![Inhoud van het pakje](/badge_2026/assets/uploads/communicator-contents.jpg)
 
 #### Monteer de luidspreker
 
 Verwijder de plastieken laag om de luidspreker op de printplaat te kleven. Soldeer de 2 draden op de printplaat zoals op de foto hieronder. De rode draad moet naar het soldeervlak gaan dat gemarkeerd is met een `+`
 
-![luidspreker gesoldeerd](speaker.jpg)
-![luidspreker achter aanzicht](speaker2.jpg)
+![luidspreker gesoldeerd](/badge_2026/assets/uploads/communicator-speaker.jpg)
+![luidspreker achter aanzicht](/badge_2026/assets/uploads/communicator-speaker2.jpg)
 
 #### Soldeer de lange pinnen
 
 Plaats de lange pinnen aan de zijde met alle componenten. Je kan een andere vrouwelijke connector (of zelfs de badge) gebruiken om de 2 losse pinnen stroken netjes op een rijtje te houden tijdens het solderen.
 
-![pinnen gesoldeerd](headers.jpg)
+![pinnen gesoldeerd](/badge_2026/assets/uploads/communicator-headers.jpg)
 
 #### Monteer het toetsenbord
 
 Duw de 2mm lange plastieken pinnetjes in de roze cover zoals getoond op de foto's hieronder. Leg het siliconen toetsenbord er in en klik het geheel op de communicator printplaat.
 
-![2mm pinngen geplaats, closeup](pink_spacer.jpg)
-![2mm pinngen geplaats](pink_spacer_overview.jpg)
-![toetsenbord in afdekplaat](pink_keyboard.jpg)
-![toetsenbord gemonteerd](pink_mounted.jpg)
+![2mm pinngen geplaats, closeup](/badge_2026/assets/uploads/communicator-pink_spacer.jpg)
+![2mm pinngen geplaats](/badge_2026/assets/uploads/communicator-pink_spacer_overview.jpg)
+![toetsenbord in afdekplaat](/badge_2026/assets/uploads/communicator-pink_keyboard.jpg)
+![toetsenbord gemonteerd](/badge_2026/assets/uploads/communicator-pink_mounted.jpg)
 
 #### Verbind de communicator met de badge
 
 Duw de lange plastieken pinnetjes in de 4 gaten die overeenkomen met de badge. Verwijder de beschermende achterplaat en duw de communicator op zijn plaats.
 
-![lange pinnen geplaatst](long_spacer.jpg)
-![Communicator verbonden](communicator_mounted.jpg)
+![lange pinnen geplaatst](/badge_2026/assets/uploads/communicator-long_spacer.jpg)
+![Communicator verbonden](/badge_2026/assets/uploads/communicator-communicator_mounted.jpg)
 
 ### Gebruik
 

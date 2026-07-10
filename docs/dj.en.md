@@ -1,3 +1,7 @@
+---
+title: "DJ Add-on"
+---
+
 # DJ Add-on
 
 To get your DJ Add-on working, you first need to assemble it before you can connect it to the badge.
@@ -17,7 +21,7 @@ The DJ add-on consists of:
 
 You can find the design and source files in the [GitHub repository](https://github.com/Fri3dCamp/dj_2026)
 
-![blockdiagram](blockdiagram.png)
+![blockdiagram](/badge_2026/assets/uploads/dj-blockdiagram.png)
 
 ### Step by step assembly guide
 
@@ -33,32 +37,32 @@ The package you received contains everything you need to build the DJ add-on
 - a cover plate for the buttons
 - 1 x 2x6 pin header with extra long pins
 
-![Contents of the package](contents.jpg)
+![Contents of the package](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Mount the faders
 
 There are 3 faders to solder: 1 on the left, 1 on the right and 1 at the bottom. Place them in the designated holes and solder them in place on the back of the PCB.
 
-![faders soldered](faders.jpg)
+![faders soldered](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Mount the potentiometers
 
 Do the same for the 6 potentiometers, 3 on each side. Click them into the designated holes and solder all contact points on the back of the PCB.
 
-![potentiometers soldered](pot.jpg)
+![potentiometers soldered](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Solder the long pins
 
 Place the long pins on the side with all the components. You can use another female connector (or even the badge) to keep the 2 loose pin strips neatly aligned while soldering.
 
-![pins soldered](headers.jpg)
+![pins soldered](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Mount the silicone keys
 
 Place the silicone keys on the PCB and slide the wooden cover plate over them. Make sure the screw holes in each corner of the silicone layer, the PCB and the plate are nicely aligned. Then mount the 4 screws in the holes from the bottom side (the PCB side), and place the nut on the top side (the side of the wooden plate).
 
-![Keys placed](keys.jpg)
-![Cover plate placed](key_cover.jpg)
+![Keys placed](/badge_2026/assets/uploads/placeholder.svg)
+![Cover plate placed](/badge_2026/assets/uploads/placeholder.svg)
 
 #### Connect 2 hard disk drives or rotary encoders
 
@@ -72,7 +76,7 @@ In the App Store of [MicropythonOS](https://micropythonos.com) you can find a si
 
 You can also try out your DJ Add-on right away in your browser with the [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/): connect the DJ Add-on to your computer via USB, open the website and click "Connect controller". You can then load tracks and mix using the potentiometers, faders and buttons of your DJ Add-on.
 
-[![Fri3d Scratcher](./fri3d-scratcher.png)](https://fri3dcamp.github.io/fri3d-scratcher//)
+[![Fri3d Scratcher](/badge_2026/assets/uploads/dj-fri3d-scratcher.png)](https://fri3dcamp.github.io/fri3d-scratcher//)
 
 ### Usage
 

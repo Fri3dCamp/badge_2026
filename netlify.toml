@@ -1,0 +1,18 @@
+[build]
+  command = "mkdocs build -d site/badge_2026 && printf '<meta http-equiv=\"refresh\" content=\"0;url=/badge_2026/\">' > site/index.html"
+  publish = "site"
+
+[[redirects]]
+  from = "/admin"
+  to = "/badge_2026/admin/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/badge_2026/admin/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/badge_2026/"
+  status = 301

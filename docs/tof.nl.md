@@ -1,3 +1,7 @@
+---
+title: "ToF Sensor"
+---
+
 # ToF Sensor
 
 De [Time-of-flight](https://nl.wikipedia.org/wiki/Time-of-flightcamera) sensor add-on bevat een [VL53L7CH](https://www.st.com/en/imaging-and-photonics-solutions/vl53l7ch.html) 8x8 multizone ToF sensor en kwam tot stand met steun van [EBV Elektronik](https://my.avnet.com/ebv/) en [STMicroelectronics](https://www.st.com/).

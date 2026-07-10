@@ -1,3 +1,7 @@
+---
+title: "Start pagina"
+---
+
 # Start pagina
 
 Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagina.
@@ -6,12 +10,12 @@ Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagin
 ## Fri3d Camp 2026
 <div style="display: grid;grid-gap:1rem;grid-template-columns: repeat(2, 1fr);">
 
-<a href="/badge_2026/badge/"><img src="badge2026.jpg" alt="Badge 2026"/></a>
-<a href="/badge_2026/communicator/"><img src="/badge_2026/communicator.jpg" alt="Communicator"/></a>
-<a href="/badge_2026/dj/"><img src="/badge_2026/dj.jpg" alt="DJ Controller"/></a>
-<a href="/badge_2026/tof/"><img src="/badge_2026/tof.jpg" alt="ToF Addon"/></a>
-<a href="/badge_2026/lora/"><img src="/badge_2026/lora.jpg" alt="LoRa Expansion"/></a>
-<a href="/badge_2026/mirror/"><img src="/badge_2026/mirror.jpg" alt="SaO Mirror"/></a>
+<a href="/badge_2026/badge/"><img src="/badge_2026/assets/uploads/home-badge2026.jpg" alt="Badge 2026"/></a>
+<a href="/badge_2026/communicator/"><img src="/badge_2026/assets/uploads/home-communicator.jpg" alt="Communicator"/></a>
+<a href="/badge_2026/dj/"><img src="/badge_2026/assets/uploads/home-dj.jpg" alt="DJ Controller"/></a>
+<a href="/badge_2026/tof/"><img src="/badge_2026/assets/uploads/home-tof.jpg" alt="ToF Addon"/></a>
+<a href="/badge_2026/lora/"><img src="/badge_2026/assets/uploads/home-lora.jpg" alt="LoRa Expansion"/></a>
+<a href="/badge_2026/mirror/"><img src="/badge_2026/assets/uploads/home-mirror.jpg" alt="SaO Mirror"/></a>
 
 </div>
 ## Fri3d Camp 2024 

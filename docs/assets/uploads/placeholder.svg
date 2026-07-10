@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Image Placeholder</title>
+  <desc id="desc">Placeholder image used when the original photo is not yet available.</desc>
+  <rect width="1200" height="675" fill="#e5e7eb" />
+  <rect x="24" y="24" width="1152" height="627" fill="none" stroke="#9ca3af" stroke-width="4" stroke-dasharray="14 10" />
+  <text x="600" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#374151">Image Not Added Yet</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#6b7280">Please upload the final assembly photo</text>
+</svg>

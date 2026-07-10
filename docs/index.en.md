@@ -1,3 +1,7 @@
+---
+title: "Fri3d Camp 2026 Badge"
+---
+
 # Fri3d Camp 2026 Badge
 
 This site contains the documentation for the Fri3d Camp 2026 badge.

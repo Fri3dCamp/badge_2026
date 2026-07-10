@@ -1,3 +1,7 @@
+---
+title: "MCP Server"
+---
+
 # MCP Server
 
 The **fri3d-badge-mcp** server is a [Model Context Protocol](https://modelcontextprotocol.io/) server that gives AI assistants (such as Claude, GitHub Copilot, Cursor, …) structured access to the documentation you need when programming the Fri3d Camp 2026 badge.
