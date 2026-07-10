@@ -70,15 +70,15 @@ You can also connect classic rotary encoders to the DJ add-on. These will probab
 
 In the App Store of [MicropythonOS](https://micropythonos.com) you can find a simple DJ Add-on app that you can use to test whether your DJ Add-on works properly.
 
-You can also try out your DJ Add-on right away in your browser with the [Fri3d Scratcher](https://fri3d-scratcher.vercel.app/): connect the DJ Add-on to your computer via USB, open the website and click "Connect controller". You can then load tracks and mix using the potentiometers, faders and buttons of your DJ Add-on.
+You can also try out your DJ Add-on right away in your browser with the [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/): connect the DJ Add-on to your computer via USB, open the website and click "Connect controller". You can then load tracks and mix using the potentiometers, faders and buttons of your DJ Add-on.
 
-[![Fri3d Scratcher](./fri3d-scratcher.png)](https://fri3d-scratcher.vercel.app/)
+[![Fri3d Scratcher](./fri3d-scratcher.png)](https://fri3dcamp.github.io/fri3d-scratcher//)
 
 ### Usage
 
 The DJ add-on presents itself as a [MIDI](https://midi.org/basic-of-usb) device. You can connect the DJ add-on to your computer via USB, or to your badge via the expansion connector. The DJ Add-on can communicate with the badge via both UART and I2C. The UART settings are 115200 8N1.
 
-Want to get started as a DJ right away? Connect the DJ Add-on to your computer via USB and open the [Fri3d Scratcher](https://fri3d-scratcher.vercel.app/) web application in your browser. It works via Web MIDI and lets you mix 2 decks with your DJ Add-on as a controller.
+Want to get started as a DJ right away? Connect the DJ Add-on to your computer via USB and open the [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/) web application in your browser. It works via Web MIDI and lets you mix 2 decks with your DJ Add-on as a controller.
 
 Via USB and UART the MIDI protocol is used. The following MIDI signals are sent by the DJ add-on:
 
