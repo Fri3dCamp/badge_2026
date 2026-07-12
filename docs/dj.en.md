@@ -1,5 +1,5 @@
 ---
-title: "DJ Add-on"
+title: DJ Add-on
 ---
 
 # DJ Add-on
