@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 
 site_url: https://fri3d2026.netlify.app/badge_2026/
 display_url: https://fri3d2026.netlify.app/badge_2026/
-logo_url: /badge_2026/assets/logo_white.svg
+logo_url: /badge_2026/assets/logo_black.svg
 
 i18n:
   structure: multiple_files

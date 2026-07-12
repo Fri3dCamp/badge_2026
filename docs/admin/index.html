@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fri3d 2026 Docs CMS</title>
+    <script>
+      // The CMS only works on Netlify (Identity + Git Gateway), so redirect
+      // visitors of the GitHub Pages deployment to the Netlify admin.
+      if (window.location.hostname === "fri3dcamp.github.io") {
+        window.location.replace("https://fri3d2026.netlify.app/badge_2026/admin/");
+      }
+    </script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
