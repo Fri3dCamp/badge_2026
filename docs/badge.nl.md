@@ -6,7 +6,7 @@ title: "Badge 2026 documentatie"
 
 ## Aansluitingen
 
-Wanneer je de badge vast hebt zals je zien dat er al aardig wat aansluitmogelijkheiden zijn. Hieronder in het kort een somenvatting van de aanwezige en optionele aansluitingen op de badge.
+Wanneer je de badge vast hebt zals je zien dat er al aardig wat aansluitmogelijkheiden zijn. Hieronder in het kort een samenvatting van de aanwezige en optionele aansluitingen op de badge.
 
 ### Standaard aanwezig
 - USB-C (max power draw?)
