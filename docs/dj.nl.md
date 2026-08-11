@@ -51,7 +51,7 @@ Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de DJ add-on te
 
 #### Monteer de faders
 
-Er zijn 3 faders om te solderen: 1 links, 1 rechts en 1 onderaan. 
+Er zijn 3 faders om te solderen: 1 links, 1 rechts en 1 onderaan.
 Plooi de middelste 2 pinnetjes van de faders vlak, er is wat plaats tussen de fader en de pcb, ongeveer vlak is goed.
 Zet ze in de voorziene gaten en soldeer ze vast langs de achterkant van de PCB.
 ![fader](/badge_2026/assets/uploads/DJ-Slider.jpeg)
@@ -83,9 +83,9 @@ Monteer daarna de 4 schroeven in de gaten langs de onderzijde (de kant van de PC
 
 In klassieke harde schijven voor computers zit steeds een ronde magnetische plaat die door een spindelmotor wordt rondgedraaid. Deze spindelmotor is (meestal) een 3-fasige brushless DC-motor zonder sensoren. Er zullen dus 4 contactpunten naar de motor gaan. De bedoeling is dat we deze spindelmotor als input device gaan gebruiken op de DJ add-on door 3 van deze 4 contactpunten te verbinden met 1 van de encoder inputs van de DJ add-on. Ook daarvoor is dus wat soldeerwerk nodig. Onze inspiratie hiervoor kwam van [deze instructable](https://www.instructables.com/HDDJ-Turning-an-old-hard-disk-drive-into-a-rotary/), waar je dus ook meer informatie kan vinden.
 
-We sluiten dus 2 van de 3 fases van de motor aan op de DJ add-on. Deze geven elk een sinusoidaal signaal dat 120 graden in fase verschoven is. Intern op de DJ add-on zijn [comparators](https://en.wikipedia.org/wiki/Comparator) gemonteerd die deze 2 sinus golven omzet in 2 blokgolven die gemakkelijk door de encoder functie van de CH32X035 kunnen gemeten worden.
+We sluiten dus 2 van de 3 fases van de HDD motor aan op poort P2 of P3 bovenaan de PCB van de DJ add-on (zie het blokschema hierboven). Deze geven elk een sinusoidaal signaal dat 120 graden in fase verschoven is. Intern op de DJ add-on zijn [comparators](https://en.wikipedia.org/wiki/Comparator) gemonteerd die deze 2 sinus golven omzet in 2 blokgolven die gemakkelijk door de encoder functie van de CH32X035 kunnen gemeten worden. Deze encoder telt dan het aantal pulsen die worden gegenereerd door aan de HDD platter te draaien waarbij wordt opgeteld bij draaien in de ene richting, en afgeteld bij draaien in de andere richting.
 
-Je kan ook klassieke rotary encoders aansluiten op de DJ add-on. Deze zullen waarschijnlijk een preciezer signaal opleveren dan de HDDs.
+Je kan ook klassieke rotary encoders rechtstreeks aansluiten op de encoder functies van de CH32X035 (dus zonder de comparators te gebruiken) via pads P4 en P5 op de PCB. Deze pads zijn voorzien om 4-pin [JST SH connectoren](https://www.jst.co.uk/productSeries.php?pid=93&cat=30) op te solderen. Rotary encoders zullen waarschijnlijk een preciezer signaal opleveren dan de HDDs omdat ze doorgaans meer pulsen per rotatie (ppr) genereren. Er bestaan ook magnetische hoeksensoren die hetzelfde A/B quadratuur uitgangssignaal genereren als klassieke rotary encoders, zoals bijvoorbeeld een MT6701 of bepaalde sensoren van het Belgische [Melexis](https://www.melexis.com) zoals bvb de [MLX90382](https://www.melexis.com/en/product/MLX90382/Triaxis-Magnetic-High-speed-Encoder). Meer info kan je [hier](https://garrysblog.com/2025/10/16/replacing-a-rotary-encoder-with-a-magnetic-sensor-and-potentiometer/) lezen.
 
 In de App Store van [MicropythonOS](https://micropythonos.com) kan je een eenvoudige DJ Add-on app vinden die je kan gebruiken om te testen of je DJ Add-on helemaal goed werkt.
 
@@ -95,7 +95,7 @@ Je kan je DJ Add-on ook meteen uittesten in je browser met de [Fri3d Scratcher](
 
 ### Gebruik
 
-De DJ add-on doet zich voor als een [MIDI](https://midi.org/basic-of-usb) toestel. Je kan de DJ add-on via USB aansluiten op je computer, of via de expansion connector met je badge. De DJ Add-on kan zowel via UART als via I2C met de badge communiceren. De UART instellingen zijn 115200 8N1.
+De DJ add-on doet zich voor als een [MIDI](https://midi.org/basic-of-usb) toestel. Je kan de DJ add-on via USB aansluiten op je computer, of via de expansion connector met je badge. De DJ add-on kan zowel via UART als via I2C (adres: `0x3A`) met de badge communiceren. De UART instellingen zijn 115200 8N1.
 
 Wil je meteen aan de slag als DJ? Sluit de DJ Add-on via USB aan op je computer en open de [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/) webapplicatie in je browser. Deze werkt via Web MIDI en laat je 2 decks mixen met je DJ Add-on als controller. Als je sliders of draaiknoppen niet lijken te werken, update dan even de firmware via [de fri3d web flasher](https://fri3dcamp.github.io/fri3d-web-flasher/)
 
@@ -150,6 +150,14 @@ De volgende tabel geeft de mapping weer tussen de MIDI waarden en de ingestelde 
 | 0x07   | 0xfc | 0xa6  | 0xd7  | white        |
 | 0x08   | 0xf2 | 0xf2  | 0xff  | bright white |
 | 0x09   | 0xff | 0x80  | 0x00  | green        |
+
+Om via MIDI alle kleuren van alle LEDs te kunnen kiezen, hebben we eigelijk 4 bytes nodig (LED index, rood, groen, blauw), wat meer is dan wat we beschikbaar hebben in een MIDI Control Change message. Daarom gebruiken we hiervoor MIDI System Exclusive (SysEx) messages. Het formaat is:
+
+```
+F0 13 37 <led> <rood> <groen> <blauw> F7
+```
+
+De eerste byte `0xF0` duidt de start van een SysEx MIDI message aan. Byte 2 en 3 geven een fabrikants ID (`0x1337` in ons geval) aan. De 4de byte is de LED index zoals beschreven hierboven. De volgende 3 bytes zijn de waardes voor de kleuren `rood`, `groen` en `blauw`. Opgelet: hun maximale toegelaten waarde in een MIDI SysEx message is `0x7F` (MIDI waardes zijn altijd 7-bit, remember), dus zorg ervoor dat je je kleur waarde (meestal 0-255) 1 bit naar rechts shift voordat je hem verstuurt in je SysEx message. De laatste byte `0xF7` geeft het einde van de SysEx message aan.
 
 Via I2C wordt niet het MIDI protocol gebruikt, maar klassieke register read/write operaties, zoals gebruikelijk bij I2C devices. Onderstaande tabel geeft de registers weer met hun functies en permissies alsook de lengte en bereik van de data:
 
