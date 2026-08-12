@@ -88,7 +88,7 @@ So we connect 2 of the 3 phases of the motor to the DJ add-on. Each of these pro
 
 You can also connect classic rotary encoders to the DJ add-on. These will probably provide a more precise signal than the HDDs.
 
-In the App Store of [MicropythonOS](https://micropythonos.com) you can find a simple DJ Add-on app that you can use to test whether your DJ Add-on works properly.
+In the App Store of [MicropythonOS](https://MicroPythonOS.org) you can find a simple DJ Add-on app that you can use to test whether your DJ Add-on works properly.
 
 You can also try out your DJ Add-on right away in your browser with the [Fri3d Scratcher](https://fri3dcamp.github.io/fri3d-scratcher/): connect the DJ Add-on to your computer via USB, open the website and click "Connect controller". You can then load tracks and mix using the potentiometers, faders and buttons of your DJ Add-on.
 
