@@ -180,9 +180,9 @@ The badge runs a customised version of
 [MicroPythonOS](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS).
 
 It comes with several
-[pre-installed applications](https://docs.micropythonos.com/apps/built-in-apps/)
+[pre-installed applications](https://docs.MicroPythonOS.org/apps/built-in-apps/)
 and an
-[App Store](https://docs.micropythonos.com/apps/appstore/)
+[App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 where you can find and install additional programs.
 
 You can also write your own applications using MicroPython and the
@@ -206,5 +206,5 @@ You can also
 
 - [Badge hardware](https://github.com/Fri3dCamp/badge_2026_hw)
 - [MicroPythonOS](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)
-- [MicroPythonOS documentation](https://docs.micropythonos.com/)
+- [MicroPythonOS documentation](https://docs.MicroPythonOS.org/)
 - [Fri3d IDE](https://fri3dcamp.github.io/Fri3d-IDE/)

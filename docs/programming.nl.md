@@ -28,11 +28,11 @@ Een toepassing kan onder andere:
 
 Meer informatie:
 
-- [MicroPythonOS-documentatie](https://docs.micropythonos.com/)
-- [Overzicht van toepassingen](https://docs.micropythonos.com/apps/)
-- [Een toepassing maken](https://docs.micropythonos.com/apps/creating-apps/)
-- [Ingebouwde toepassingen](https://docs.micropythonos.com/apps/built-in-apps/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [MicroPythonOS-documentatie](https://docs.MicroPythonOS.org/)
+- [Overzicht van toepassingen](https://docs.MicroPythonOS.org/apps/)
+- [Een toepassing maken](https://docs.MicroPythonOS.org/apps/creating-apps/)
+- [Ingebouwde toepassingen](https://docs.MicroPythonOS.org/apps/built-in-apps/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 
 ## Wat heb je nodig?
 
@@ -100,7 +100,7 @@ com.jouwnaam.eersteapp
 
 Bekijk de actuele structuur en manifestvelden in de handleiding:
 
-[Een MicroPythonOS-toepassing maken](https://docs.micropythonos.com/apps/creating-apps/)
+[Een MicroPythonOS-toepassing maken](https://docs.MicroPythonOS.org/apps/creating-apps/)
 
 ## Een nieuwe toepassing maken in de Fri3d-IDE
 
@@ -271,9 +271,9 @@ Wanneer je toepassing klaar is, kun je ze bundelen en publiceren.
 
 Lees hiervoor:
 
-- [Toepassingen bundelen](https://docs.micropythonos.com/apps/bundling-apps/)
-- [Toepassingen publiceren via BadgeHub](https://docs.micropythonos.com/apps/badgehub/)
-- [De MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [Toepassingen bundelen](https://docs.MicroPythonOS.org/apps/bundling-apps/)
+- [Toepassingen publiceren via BadgeHub](https://docs.MicroPythonOS.org/apps/badgehub/)
+- [De MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 
 Controleer vóór publicatie minstens het volgende:
 
@@ -339,8 +339,8 @@ het samen met de metadata naar BadgeHub.
 Meer informatie:
 
 - [BadgeHub](https://badgehub.eu/)
-- [MicroPythonOS-handleiding voor BadgeHub](https://docs.micropythonos.com/apps/badgehub/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [MicroPythonOS-handleiding voor BadgeHub](https://docs.MicroPythonOS.org/apps/badgehub/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 
 
 ## Goede gewoontes
@@ -383,10 +383,10 @@ Toon een begrijpelijke melding wanneer iets mislukt. Alleen een foutmelding in d
 
 - [Fri3d-IDE](https://fri3dcamp.github.io/Fri3d-IDE/)
 - [Broncode van de Fri3d-IDE](https://github.com/Fri3dCamp/Fri3d-IDE)
-- [MicroPythonOS-documentatie](https://docs.micropythonos.com/)
-- [MicroPythonOS-toepassingen](https://docs.micropythonos.com/apps/)
-- [Een toepassing maken](https://docs.micropythonos.com/apps/creating-apps/)
-- [Toepassingen bundelen](https://docs.micropythonos.com/apps/bundling-apps/)
-- [BadgeHub](https://docs.micropythonos.com/apps/badgehub/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [MicroPythonOS-documentatie](https://docs.MicroPythonOS.org/)
+- [MicroPythonOS-toepassingen](https://docs.MicroPythonOS.org/apps/)
+- [Een toepassing maken](https://docs.MicroPythonOS.org/apps/creating-apps/)
+- [Toepassingen bundelen](https://docs.MicroPythonOS.org/apps/bundling-apps/)
+- [BadgeHub](https://docs.MicroPythonOS.org/apps/badgehub/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 - [MicroPythonOS-broncode](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)

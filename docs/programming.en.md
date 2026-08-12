@@ -33,11 +33,11 @@ An application can, for example:
 
 More information:
 
-- [MicroPythonOS documentation](https://docs.micropythonos.com/)
-- [Applications overview](https://docs.micropythonos.com/apps/)
-- [Creating an application](https://docs.micropythonos.com/apps/creating-apps/)
-- [Built-in applications](https://docs.micropythonos.com/apps/built-in-apps/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [MicroPythonOS documentation](https://docs.MicroPythonOS.org/)
+- [Applications overview](https://docs.MicroPythonOS.org/apps/)
+- [Creating an application](https://docs.MicroPythonOS.org/apps/creating-apps/)
+- [Built-in applications](https://docs.MicroPythonOS.org/apps/built-in-apps/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 
 ## What do you need?
 
@@ -138,7 +138,7 @@ com.yourname.firstapp
 Refer to the current MicroPythonOS documentation for the supported manifest
 fields and application structure:
 
-[Creating a MicroPythonOS application](https://docs.micropythonos.com/apps/creating-apps/)
+[Creating a MicroPythonOS application](https://docs.MicroPythonOS.org/apps/creating-apps/)
 
 ## Testing the program
 
@@ -172,8 +172,8 @@ install it later with **Install MPK** in Fri3d-IDE.
 
 More information:
 
-- [Bundling MicroPythonOS applications](https://docs.micropythonos.com/apps/bundling-apps/)
-- [MicroPythonOS applications](https://docs.micropythonos.com/apps/)
+- [Bundling MicroPythonOS applications](https://docs.MicroPythonOS.org/apps/bundling-apps/)
+- [MicroPythonOS applications](https://docs.MicroPythonOS.org/apps/)
 
 ## Publishing the application to BadgeHub
 
@@ -224,8 +224,8 @@ Publish a new version only after increasing its version number.
 More information:
 
 - [BadgeHub](https://badgehub.eu/)
-- [Publishing MicroPythonOS apps to BadgeHub](https://docs.micropythonos.com/apps/badgehub/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [Publishing MicroPythonOS apps to BadgeHub](https://docs.MicroPythonOS.org/apps/badgehub/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 
 ## Understanding errors
 
@@ -337,10 +337,10 @@ is often not enough for ordinary users.
 
 - [Fri3d-IDE](https://fri3dcamp.github.io/Fri3d-IDE/)
 - [Fri3d-IDE source code](https://github.com/Fri3dCamp/Fri3d-IDE)
-- [MicroPythonOS documentation](https://docs.micropythonos.com/)
-- [MicroPythonOS applications](https://docs.micropythonos.com/apps/)
-- [Creating an application](https://docs.micropythonos.com/apps/creating-apps/)
-- [Bundling applications](https://docs.micropythonos.com/apps/bundling-apps/)
-- [BadgeHub](https://docs.micropythonos.com/apps/badgehub/)
-- [MicroPythonOS App Store](https://docs.micropythonos.com/apps/appstore/)
+- [MicroPythonOS documentation](https://docs.MicroPythonOS.org/)
+- [MicroPythonOS applications](https://docs.MicroPythonOS.org/apps/)
+- [Creating an application](https://docs.MicroPythonOS.org/apps/creating-apps/)
+- [Bundling applications](https://docs.MicroPythonOS.org/apps/bundling-apps/)
+- [BadgeHub](https://docs.MicroPythonOS.org/apps/badgehub/)
+- [MicroPythonOS App Store](https://docs.MicroPythonOS.org/apps/appstore/)
 - [MicroPythonOS source code](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)

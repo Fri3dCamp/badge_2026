@@ -17,6 +17,6 @@ De printplaat bevat, naast de [VL53L7CH](https://www.st.com/en/imaging-and-photo
 ![ToF Mounted](/badge_2026/assets/uploads/ToF-Mounted.jpeg)
 
 ## SOFTWARE
-Er is een voorbeeld programma beschikbaar in de [appstore](https://docs.micropythonos.com/apps/appstore/) van [MicroPythonOS](https://micropythonos.com/). Tevens biedt [STMicroelectronics](https://www.st.com/) ook voorbeeldcode aan op de [productpagina van de sensor](https://www.st.com/en/embedded-software/stsw-img043.html#section-get-software-table) waarmee je aan de slag kan voor je eigen project.  
+Er is een voorbeeld programma beschikbaar in de [appstore](https://docs.MicroPythonOS.org/apps/appstore/) van [MicroPythonOS](https://MicroPythonOS.org/). Tevens biedt [STMicroelectronics](https://www.st.com/) ook voorbeeldcode aan op de [productpagina van de sensor](https://www.st.com/en/embedded-software/stsw-img043.html#section-get-software-table) waarmee je aan de slag kan voor je eigen project.  
 ![ToF App Loading](/badge_2026/assets/uploads/ToF-App-loading.jpeg)
 ![ToF App Working](/badge_2026/assets/uploads/ToF-App-working.jpeg)

@@ -174,9 +174,9 @@ Zoek je informatie over een van deze borden? Kies hieronder het juiste bord.
 De badge draait een aangepaste versie van
 [MicroPythonOS](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)
 en komt met een aantal
-[voorgeïnstalleerde applicaties](https://docs.micropythonos.com/apps/built-in-apps/)
+[voorgeïnstalleerde applicaties](https://docs.MicroPythonOS.org/apps/built-in-apps/)
 en een
-[appstore](https://docs.micropythonos.com/apps/appstore/)
+[appstore](https://docs.MicroPythonOS.org/apps/appstore/)
 waar je nog veel extra programma's kunt vinden.
 
 ## Standaardfirmware herstellen
@@ -192,6 +192,6 @@ flashen. Je kunt ook
 
 - [Hardware](https://github.com/Fri3dCamp/badge_2026_hw)
 - [Standaardbesturingssysteem](https://github.com/Fri3dCamp/badge_firmware_MicroPythonOS)
-- [MicroPythonOS documentation](https://docs.micropythonos.com/)
+- [MicroPythonOS documentation](https://docs.MicroPythonOS.org/)
 - [Fri3d IDE](https://fri3dcamp.github.io/Fri3d-IDE/)
 - [Schrijf mee aan deze documentatie](https://fri3dcamp.github.io/badge_2026/contribute/)

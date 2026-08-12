@@ -17,7 +17,7 @@ The PCB contains, besides the [VL53L7CH](https://www.st.com/en/imaging-and-photo
 ![ToF Mounted](/badge_2026/assets/uploads/ToF-Mounted.jpeg)
 
 ## SOFTWARE
-There is an example app available in the [appstore](https://docs.micropythonos.com/apps/appstore/) of [MicroPythonOS](https://micropythonos.com/). Of course [STMicroelectronics](https://www.st.com/) also offers code examples on the [product page of the sensor](https://www.st.com/en/embedded-software/stsw-img043.html#section-get-software-table) to get you started with your own projects.  
+There is an example app available in the [appstore](https://docs.MicroPythonOS.org/apps/appstore/) of [MicroPythonOS](https://MicroPythonOS.org/). Of course [STMicroelectronics](https://www.st.com/) also offers code examples on the [product page of the sensor](https://www.st.com/en/embedded-software/stsw-img043.html#section-get-software-table) to get you started with your own projects.  
 
 ![ToF App Loading](/badge_2026/assets/uploads/ToF-App-loading.jpeg)
 ![ToF App Working](/badge_2026/assets/uploads/ToF-App-working.jpeg)
